@@ -44,13 +44,6 @@ const restartBtn = document.getElementById("restart");
   }
 })();
 
-// update footer with element count
-(function updateFooterNote() {
-  const footerNote = document.querySelector("footer .small");
-  if (footerNote)
-    footerNote.textContent = `Quiz for first ${elements.length} elements`;
-})();
-
 let quiz = [];
 let current = 0;
 let correct = 0;
