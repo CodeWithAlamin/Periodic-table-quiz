@@ -138,6 +138,17 @@ main {
   word-wrap: break-word;
 }
 
+.question h3 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.25rem;
+}
+
+.question p {
+  margin: 0.25rem 0;
+  font-size: 0.875rem;
+  color: var(--muted);
+}
+
 .input-row {
   display: flex;
   gap: 0.625rem;
