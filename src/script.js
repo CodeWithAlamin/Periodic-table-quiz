@@ -1,8 +1,5 @@
-// Load elements/options from data.js (CONFIG)
-const elements =
-  window.CONFIG && Array.isArray(window.CONFIG.elements)
-    ? window.CONFIG.elements
-    : [];
+// Import elements and options from data.js
+import { elements, countOptions } from "./data.js";
 
 const modeEl = document.getElementById("mode");
 const countEl = document.getElementById("count");
@@ -20,13 +17,10 @@ const remainingEl = document.getElementById("remaining");
 const revealBtn = document.getElementById("reveal");
 const restartBtn = document.getElementById("restart");
 
-// Build Questions dropdown from CONFIG.countOptions
+// Build Questions dropdown from countOptions
 (function populateCountOptions() {
   try {
-    const opts =
-      window.CONFIG && Array.isArray(window.CONFIG.countOptions)
-        ? window.CONFIG.countOptions
-        : [10, 20, elements.length];
+    const opts = countOptions || [10, 20, elements.length];
     // clear and add options
     countEl.innerHTML = "";
     opts.forEach((o) => {
