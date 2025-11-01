@@ -168,7 +168,8 @@ input.answer:focus {
 
 .log {
   flex: 1;
-  height: 100%;
+  height: 22.5rem;
+  min-height: 22.5rem;
   max-height: 22.5rem;
   overflow-y: auto;
   overflow-x: hidden;
@@ -326,6 +327,8 @@ aside .card h3 {
 
   .log {
     height: 18rem;
+    min-height: 18rem;
+    max-height: 18rem;
   }
 }
 
@@ -371,6 +374,8 @@ aside .card h3 {
 
   .log {
     height: 15rem;
+    min-height: 15rem;
+    max-height: 15rem;
   }
 
   .controls {
@@ -455,6 +460,8 @@ aside .card h3 {
 
   .log {
     height: 12rem;
+    min-height: 12rem;
+    max-height: 12rem;
   }
 
   .input-row {
