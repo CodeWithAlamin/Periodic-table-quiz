@@ -236,6 +236,77 @@ footer {
   color: var(--muted);
 }
 
+.footer-links {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.footer-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  color: var(--muted);
+  text-decoration: none;
+  font-size: 0.8125rem;
+  transition: color 0.2s ease, transform 0.2s ease;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
+}
+
+.footer-link:hover,
+.footer-link:focus {
+  color: var(--accent);
+  transform: translateY(-0.0625rem);
+}
+
+.footer-link svg {
+  flex-shrink: 0;
+}
+
+.footer-credit {
+  font-size: 0.8125rem;
+  color: var(--muted);
+  text-align: center;
+  padding-top: 0.5rem;
+  border-top: 0.0625rem solid rgba(255, 255, 255, 0.03);
+  width: 100%;
+}
+
+.footer-credit .heart {
+  color: #ff6b6b;
+  display: inline-block;
+  animation: heartbeat 1.5s ease-in-out infinite;
+}
+
+@keyframes heartbeat {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  10%,
+  30% {
+    transform: scale(1.1);
+  }
+  20%,
+  40% {
+    transform: scale(1);
+  }
+}
+
+.footer-credit .credit-link {
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.2s ease;
+}
+
+.footer-credit .credit-link:hover,
+.footer-credit .credit-link:focus {
+  color: #60a5fa;
+  text-decoration: underline;
+}
+
 aside .card {
   padding: 1rem;
 }
@@ -319,6 +390,23 @@ aside .card h3 {
   footer {
     padding: 0.75rem 1rem;
     font-size: 0.75rem;
+    flex-direction: column;
+    text-align: center;
+    gap: 0.75rem;
+  }
+
+  .footer-links {
+    gap: 0.75rem;
+  }
+
+  .footer-link {
+    font-size: 0.75rem;
+    padding: 0.25rem 0.375rem;
+  }
+
+  .footer-credit {
+    font-size: 0.75rem;
+    padding-top: 0.375rem;
   }
 
   .btn-plain {
@@ -389,6 +477,23 @@ aside .card h3 {
   footer {
     padding: 0.5rem 0.75rem;
     font-size: 0.6875rem;
+    flex-direction: column;
+    gap: 0.625rem;
+  }
+
+  .footer-links {
+    gap: 0.625rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .footer-link {
+    font-size: 0.6875rem;
+  }
+
+  .footer-credit {
+    font-size: 0.6875rem;
+    padding-top: 0.375rem;
   }
 
   .small {
