@@ -1,4 +1,4 @@
-# ⚛️ Periodic Table Quiz
+# Periodic Table Quiz
 
 <div align="center">
 
@@ -9,13 +9,12 @@
 Match element symbols with atomic numbers across all 118 elements. Choose your mode, track your time, and improve your periodic table mastery.
 
 [![Live Demo](https://img.shields.io/badge/Live-Demo-7dd3fc?style=for-the-badge)](https://periodic-table-quiz-alamin.vercel.app/)
-[![GitHub](https://img.shields.io/badge/GitHub-Repo-181717?style=for-the-badge&logo=github)](https://github.com/CodeWithAlamin/Periodic-table-quiz)
 
 </div>
 
 ---
 
-## ✨ Features
+## Features
 
 - **Multiple Quiz Modes**
 
@@ -53,7 +52,7 @@ Match element symbols with atomic numbers across all 118 elements. Choose your m
 
 ---
 
-## 🛠️ Technologies
+## Technologies
 
 - **HTML5** - Semantic markup
 - **CSS3** - Modern responsive design with rem units
@@ -61,7 +60,7 @@ Match element symbols with atomic numbers across all 118 elements. Choose your m
 
 ---
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 Periodic-table-quiz/
@@ -75,7 +74,7 @@ Periodic-table-quiz/
 
 ---
 
-## ⚙️ Configuration
+## Configuration
 
 Want to customize the quiz? Edit `data.js`:
 
@@ -100,7 +99,7 @@ The app will automatically update the UI based on your configuration!
 
 ---
 
-## 🎮 How to Play
+## How to Play
 
 1. **Select Mode**: Choose how you want to be quizzed
 
@@ -118,7 +117,7 @@ The app will automatically update the UI based on your configuration!
 
 ---
 
-## 🤝 Contributing
+## Contributing
 
 Contributions are welcome! Here are some ideas:
 
@@ -132,23 +131,23 @@ Feel free to open an issue or submit a pull request!
 
 ---
 
-## 📝 License
+## License
 
 This project is open source and available under the [Apache License V2.0](LICENSE).
 
 ---
 
-## 👨‍💻 Author
+## Author
 
 **Alamin**
 
-- 💼 LinkedIn: [@CodeWithAlamin](https://www.linkedin.com/in/CodeWithAlamin/)
-- 🐙 GitHub: [@CodeWithAlamin](https://github.com/CodeWithAlamin)
-- 🌐 Portfolio: [codewithalamin.com](https://codewithalamin.com)
+- LinkedIn: [@CodeWithAlamin](https://www.linkedin.com/in/CodeWithAlamin/)
+- GitHub: [@CodeWithAlamin](https://github.com/CodeWithAlamin)
+- Portfolio: [codewithalamin.com](https://codewithalamin.com)
 
 ---
 
-## 🙏 Acknowledgments
+## Acknowledgments
 
 - Inspired by the need to memorize the periodic table
 - Built with passion for chemistry and coding
