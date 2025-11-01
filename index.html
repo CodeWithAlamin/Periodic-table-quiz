@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <link rel="stylesheet" href="style.css" />
+
+    <title>Periodic Table Quiz — Symbol ⇄ Atomic Number</title>
+  </head>
+  <body>
+    <div class="app">
+      <header>
+        <h1>Periodic Table Quiz — Symbol ⇄ Atomic Number</h1>
+        <div class="controls">
+          <label class="small">Mode:</label>
+          <select id="mode">
+            <option value="symbol-number">Symbol → Atomic Number</option>
+            <option value="number-symbol">Atomic Number → Symbol</option>
+            <option value="mixed">Mixed</option>
+          </select>
+          <label class="small">Questions:</label>
+          <select id="count">
+            <option value="10">10</option>
+            <option value="20" selected>20</option>
+            <option value="36">All 36</option>
+          </select>
+          <button id="start">Start Quiz</button>
+        </div>
+      </header>
+
+      <main>
+        <section>
+          <div class="card">
+            <div class="question" id="question">
+              Press <strong>Start Quiz</strong> to begin.
+            </div>
+
+            <div class="input-row">
+              <input
+                id="answer"
+                class="answer"
+                placeholder="Type your answer here"
+                autocomplete="off"
+              />
+              <button id="submit">Check</button>
+              <button id="skip" class="btn-plain">Skip</button>
+            </div>
+
+            <div class="meta" id="meta">Mode: — | Question: — / —</div>
+            <div class="progress"><i id="bar"></i></div>
+
+            <div class="log" id="log"></div>
+          </div>
+        </section>
+
+        <aside>
+          <div class="card">
+            <h3 style="margin: 0 0 10px 0">Score</h3>
+            <div
+              style="
+                display: flex;
+                gap: 12px;
+                align-items: center;
+                margin-bottom: 10px;
+              "
+            >
+              <div>
+                <div class="small">Correct</div>
+                <div id="scoreCorrect" style="font-size: 20px">0</div>
+              </div>
+              <div>
+                <div class="small">Wrong</div>
+                <div id="scoreWrong" style="font-size: 20px">0</div>
+              </div>
+              <div style="margin-left: auto; text-align: right">
+                <div class="small">Remaining</div>
+                <div id="remaining" style="font-size: 20px">0</div>
+              </div>
+            </div>
+
+            <div style="display: flex; gap: 8px">
+              <button id="reveal" class="btn-plain">Reveal Answer</button>
+              <button id="restart" class="btn-plain">Restart</button>
+            </div>
+          </div>
+        </aside>
+      </main>
+
+      <footer>
+        <div class="small">Quiz for first 36 elements</div>
+        <div class="small">Press Enter to submit</div>
+      </footer>
+    </div>
+
+    <script src="./data.js"></script>
+    <script src="./script.js"></script>
+  </body>
+</html>
