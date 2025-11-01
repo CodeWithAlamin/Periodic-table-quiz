@@ -4,10 +4,10 @@ import { elements, countOptions } from "./data.js";
 const modeEl = document.getElementById("mode");
 const countEl = document.getElementById("count");
 const startBtn = document.getElementById("start");
+const stopBtn = document.getElementById("stop");
 const questionEl = document.getElementById("question");
 const answerInput = document.getElementById("answer");
 const submitBtn = document.getElementById("submit");
-const skipBtn = document.getElementById("skip");
 const logEl = document.getElementById("log");
 const barEl = document.getElementById("bar");
 const metaEl = document.getElementById("meta");
@@ -84,6 +84,10 @@ function startQuiz() {
   startTimer();
   renderQuestion();
   answerInput.focus();
+
+  // Toggle buttons
+  startBtn.style.display = "none";
+  stopBtn.style.display = "inline-block";
 }
 
 function startTimer() {
@@ -155,6 +159,20 @@ function checkAnswer() {
   renderQuestion();
 }
 
+function stopQuiz() {
+  clearInterval(timerInterval);
+  const totalTime = (Date.now() - quizStartTime) / 1000;
+  const mins = Math.floor(totalTime / 60);
+  const secs = Math.floor(totalTime % 60);
+  barEl.style.width = `${(current / quiz.length) * 100}%`;
+  questionEl.innerHTML = `<h3>Quiz Stopped</h3><p>Progress: ${current}/${quiz.length} questions answered</p><p>Score: ${correct} correct, ${wrong} wrong</p><p>Time: <strong>${mins}m ${secs}s</strong></p>`;
+  metaEl.textContent = "Quiz stopped";
+
+  // Toggle buttons
+  startBtn.style.display = "inline-block";
+  stopBtn.style.display = "none";
+}
+
 function skipQuestion() {
   if (current >= quiz.length) return;
   const q = quiz[current];
@@ -199,6 +217,10 @@ function finishQuiz() {
   const secs = Math.floor(totalTime % 60);
   barEl.style.width = "100%";
   questionEl.innerHTML = `<h3>Finished!</h3><p>Score: ${correct}/${quiz.length}</p><p>Total Time: <strong>${mins}m ${secs}s</strong></p>`;
+
+  // Toggle buttons
+  startBtn.style.display = "inline-block";
+  stopBtn.style.display = "none";
 
   // Sort by longest recall
   // Aggregate by element (use elementNum) and take the longest time per element.
@@ -254,8 +276,8 @@ function randomChoice(a) {
 }
 
 startBtn.addEventListener("click", startQuiz);
+stopBtn.addEventListener("click", stopQuiz);
 submitBtn.addEventListener("click", checkAnswer);
-skipBtn.addEventListener("click", skipQuestion);
 revealBtn.addEventListener("click", revealAnswer);
 restartBtn.addEventListener("click", () => {
   quiz = [];
@@ -268,6 +290,10 @@ restartBtn.addEventListener("click", () => {
   metaEl.textContent = "Mode: — | Question: — / —";
   barEl.style.width = "0%";
   questionEl.textContent = "Press Start Quiz to begin.";
+
+  // Toggle buttons
+  startBtn.style.display = "inline-block";
+  stopBtn.style.display = "none";
 });
 answerInput.addEventListener("keydown", (e) => {
   if (e.key === "Enter") {

@@ -103,6 +103,17 @@ button:active {
   transform: scale(0.98);
 }
 
+#stop {
+  background: #ef4444;
+  color: #fff;
+}
+
+#stop:hover,
+#stop:active {
+  background: #dc2626;
+  opacity: 1;
+}
+
 main {
   display: grid;
   grid-template-columns: 1fr 20rem;
