@@ -168,7 +168,8 @@ input.answer:focus {
 
 .log {
   flex: 1;
-  height: 22.5rem;
+  height: 100%;
+  max-height: 22.5rem;
   overflow-y: auto;
   overflow-x: hidden;
   padding: 0.375rem;
