@@ -8,6 +8,7 @@ const stopBtn = document.getElementById("stop");
 const questionEl = document.getElementById("question");
 const answerInput = document.getElementById("answer");
 const submitBtn = document.getElementById("submit");
+const skipBtn = document.getElementById("skip");
 const logEl = document.getElementById("log");
 const barEl = document.getElementById("bar");
 const metaEl = document.getElementById("meta");
@@ -278,6 +279,7 @@ function randomChoice(a) {
 startBtn.addEventListener("click", startQuiz);
 stopBtn.addEventListener("click", stopQuiz);
 submitBtn.addEventListener("click", checkAnswer);
+skipBtn.addEventListener("click", skipQuestion);
 revealBtn.addEventListener("click", revealAnswer);
 restartBtn.addEventListener("click", () => {
   quiz = [];
