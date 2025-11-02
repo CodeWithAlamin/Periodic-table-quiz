@@ -8,7 +8,7 @@
 
 Match element symbols with atomic numbers across all 118 elements. Choose your mode, track your time, and improve your periodic table mastery.
 
-[![Live Demo](https://img.shields.io/badge/Live-Demo-7dd3fc?style=for-the-badge)](https://periodic-table-quiz-alamin.vercel.app/)
+[![Live Demo](https://img.shields.io/badge/Live-Demo-7dd3fc?style=for-the-badge)](https://ptquiz-alamin.vercel.app/)
 
 </div>
 
